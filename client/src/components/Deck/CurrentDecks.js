@@ -31,8 +31,8 @@ const cardTheme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          background: "#424242",
-          boxShadow: "teal 0px 2px 14px 3px",
+          background: "black",
+          boxShadow: "black -15px 7px 14px",
         },
       },
     },

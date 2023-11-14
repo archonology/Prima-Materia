@@ -45,7 +45,7 @@ const SingleDeck = () => {
   }
 
   return (
-    <Container maxWidth="md" sx={{ margin: "10em" }}>
+    <Container maxWidth="lg" sx={{ margin: "3em" }}>
       <h1 style={{ color: "#fff", textAlign: "center" }}>{deckData.title}</h1>
       {deckData?.cards?.length > 0 ? (
         <Grid container>

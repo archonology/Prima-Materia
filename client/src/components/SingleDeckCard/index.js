@@ -32,8 +32,8 @@ const cardTheme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          background: "#424242",
-          boxShadow: "teal 0px 2px 14px 3px",
+          background: "black",
+          boxShadow: "black -15px 7px 14px",
         },
       },
     },
@@ -160,7 +160,7 @@ const SingleDeckCard = ({ card, deckId, wishList }) => {
       >
         <Grid item key={card.cardId}>
           <ThemeProvider theme={cardTheme}>
-            <Card sx={{ color: "#fff", width: "250px" }}>
+            <Card sx={{ color: "#fff", width: "260px" }}>
               <CardContent>
                 <CardActionArea onClick={handleClickOpenImage}>
                   <Tooltip title="Click to view bigger" followCursor={true}>
@@ -185,7 +185,7 @@ const SingleDeckCard = ({ card, deckId, wishList }) => {
                   </Typography>
                   <Typography
                     variant="body2"
-                    sx={{ color: "#fff", height: "75px", overflow: "auto" }}
+                    sx={{ color: "#fff", height: "85px", overflow: "auto" }}
                   >
                     {card.text}
                   </Typography>
