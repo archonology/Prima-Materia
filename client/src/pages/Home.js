@@ -108,8 +108,8 @@ const Home = () => {
         </Grid>
       </Grid>
       <div className={styles.container}>
-      <Deck />
-    </div>
+        <Deck />
+      </div>
 
     </>
   );
