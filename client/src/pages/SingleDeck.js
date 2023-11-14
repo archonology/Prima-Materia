@@ -45,8 +45,8 @@ const SingleDeck = () => {
   }
 
   return (
-    <Container maxWidth="lg" sx={{ margin: "3em" }}>
-      <h1 style={{ color: "#fff", textAlign: "center" }}>{deckData.title}</h1>
+    <Container maxWidth="lg" sx={{ margin: "3em", marginTop: "10em" }}>
+      <h2 style={{ color: "#fff", textAlign: "center" }}>{deckData.title}</h2>
       {deckData?.cards?.length > 0 ? (
         <Grid container>
           {deckData?.cards?.map((card) => {
@@ -62,7 +62,9 @@ const SingleDeck = () => {
           })}
         </Grid>
       ) : (
-        <h2 style={{ color: "#fff" }}>This deck has no cards.</h2>
+        <>
+        </>
+        // <h2 style={{ color: "#fff" }}>This deck has no cards.</h2>
       )}
     </Container>
   );

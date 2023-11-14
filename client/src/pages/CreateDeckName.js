@@ -55,11 +55,21 @@ export const CreateDeck = () => {
     setOpen(false);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleCreate();
+    handleClick({
+      vertical: 'top',
+      horizontal: 'center',
+    });
+    setDeckName(title)
+  };
+
   // Button for snackbar
   const button = (
     <React.Fragment>
-      <Button variant="contained"
-
+      <Button
+        variant="contained"
         sx={{
           minWidth: "10px",
           maxWidth: "150px",
@@ -97,7 +107,8 @@ export const CreateDeck = () => {
   return (
     <>
               <Box
-          component="form"
+        component="form"
+        onSubmit={handleSubmit}
           noValidate
           sx={{
             textAlign: "center",
@@ -107,15 +118,16 @@ export const CreateDeck = () => {
             flexDirection: "column",
             justifyContent: "center",
             margin: "5em",
+            marginTop: "8em"
           }}
         >
-          <h3
+          <h2
             style={{
               color: "white",
             }}
           >
             Create a Deck
-          </h3>
+          </h2>
           <DeckTextField
             sx={{
               input: { color: "#fff" },

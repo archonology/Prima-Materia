@@ -204,7 +204,8 @@ function CurrentDecks() {
             })}
           </section>
         ) : (
-          <h1>No Decks found</h1>
+          <>
+          </>
         )}
       </Box>
     </>
