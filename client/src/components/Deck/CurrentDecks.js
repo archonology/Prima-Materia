@@ -154,7 +154,8 @@ function CurrentDecks() {
                   <ThemeProvider key={deck._id} theme={cardTheme}>
                     <Card key={deck._id} sx={{ color: "#fff", width: "250px" }}>
                       <CardContent key={deck._id}>
-                        <Link className="custom-link" to={`/decks/${deck._id}`}>
+                        <Link className="custom-link" to={`/decks/${deck._id}`}
+                          style={{ textDecoration: "none", color: '#ffff' }}>
                           <CardMedia
                             component="img"
                             image="https://cf.geekdo-images.com/CxJmNl4wR4InjqyNrMdBTw__imagepagezoom/img/KuHBP_jVjw_8gbieS8skQD_-_Ho=/fit-in/1200x900/filters:no_upscale():strip_icc()/pic163749.jpg"
