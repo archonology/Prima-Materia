@@ -30,7 +30,7 @@ const cardTheme = createTheme({
       styleOverrides: {
         root: {
           background: "#424242",
-          boxShadow: "teal 0px 2px 14px 3px",
+          boxShadow: "black -10px 7px 18px",
         },
       },
     },
@@ -44,7 +44,7 @@ const cardTheme = createTheme({
     MuiCardContent: {
       styleOverrides: {
         root: {
-          padding: ".75rem",
+          padding: ".5rem",
           "&:last-child": {
             paddingBottom: ".75rem",
           },
