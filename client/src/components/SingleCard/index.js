@@ -135,7 +135,7 @@ const SingleCard = ({ card, wishList }) => {
       >
         <Grid item>
           <ThemeProvider theme={cardTheme}>
-            <Card sx={{ color: "#fff", width: "290px" }}>
+            <Card sx={{ color: "#fff", width: "290px", transition: '1s ease-in-out' }}>
               <CardContent>
                 <CardActionArea onClick={handleClickOpenImage}>
                   <Tooltip title="Click to view bigger" followCursor={true}>
