@@ -20,15 +20,16 @@ function Footer() {
             flexGrow: 1,
             justifyContent: "center",
             display: "flex",
-            mb: 2,
+            mb: 3,
+            mt: 3
           }}
         >
           <Typography
             variant="caption"
             color="inherit"
-            sx={{ color: "#fff", letterSpacing: ".3rem", fontSize: ".8rem" }}
+            sx={{ color: "#fff", letterSpacing: ".3rem", fontSize: "18px" }}
           >
-            Prima Materia 2022
+            Prima Materia | 2022
           </Typography>
         </Box>
       </Container>

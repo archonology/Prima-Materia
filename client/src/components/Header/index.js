@@ -79,7 +79,7 @@ function Header(props) {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <AppBar component="nav" style={{ background: "black" }}>
+      <AppBar component="nav" style={{ background: "black", paddingBottom: '1em', paddingTop: '1em' }}>
         <Toolbar>
           <IconButton
             color="inherit"

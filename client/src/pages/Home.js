@@ -101,7 +101,7 @@ const Home = () => {
               alignItems: "center",
             }}
           >
-            <Typography>
+            <Typography sx={{ fontSize: '18px'}}>
               Prima Materia is a site dedicated to fans of Magic The Gathering.  You can search for cards, add cards to a wishlist, and create virtual decks. Login or sign up to get started!
             </Typography>
           </Box>
