@@ -282,7 +282,7 @@ export const Search = () => {
                 xs={12}
                 sm={6}
                 md={4}
-                sx={{ maxHeight: "580px" }}
+                sx={{ maxHeight: "660px" }}
                 key={card.cardId}
               >
                 <SingleCard card={card} wishList={userData.wishList} />
