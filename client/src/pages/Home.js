@@ -19,16 +19,16 @@ const cards = [
 ];
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
-const to = (i: number) => ({
+const to = (i) => ({
   x: 0,
   y: i * -4,
   scale: 1.5,
   rot: -10 + Math.random() * 20,
   delay: i * 100,
 });
-const from = (_i: number) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 })
+const from = (_i) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 })
 // This is being used down there in the view, it interpolates rotation and scale into a css transform
-const trans = (r: number, s: number) =>
+const trans = (r, s) =>
   `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
 
 function Deck() {
@@ -91,9 +91,9 @@ const Home = () => {
         alignItems="center"
         justifyContent="center"
         justify="center"
-        style={{ minHeight: "25vh" }}
+        style={{ minHeight: '20vh' }}
       >
-        <Grid item xs={6}>
+        <Grid item xs={8}>
           <Box
             sx={{
               display: "flex",
@@ -101,13 +101,13 @@ const Home = () => {
               alignItems: "center",
             }}
           >
-            <Typography sx={{ fontSize: '18px'}}>
+            <Typography sx={{ fontSize: '18px', paddingTop: '3em' }}>
               Prima Materia is a site dedicated to fans of Magic The Gathering.  You can search for cards, add cards to a wishlist, and create virtual decks. Login or sign up to get started!
             </Typography>
           </Box>
         </Grid>
       </Grid>
-      <div className={styles.container}>
+      <div className={styles.container} >
         <Deck />
       </div>
 
