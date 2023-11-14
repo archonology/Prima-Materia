@@ -106,7 +106,7 @@ function CurrentDecks() {
         sx={{
           display: "grid",
           gridTemplateColumns: { sm: "1fr" },
-          gap: 2,
+          gap: 1,
           display: "flex",
           flexDirection: "row",
           flexWrap: "wrap",
@@ -130,7 +130,7 @@ function CurrentDecks() {
         sx={{
           display: "grid",
           gridTemplateColumns: { sm: "1fr", md: "1fr 1fr 1fr" },
-          gap: 2,
+          gap: 1,
           display: "flex",
           flexDirection: "column",
           flexWrap: "wrap",

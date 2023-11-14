@@ -45,7 +45,7 @@ const SingleDeck = () => {
   }
 
   return (
-    <Container maxWidth="lg" sx={{ margin: "3em", marginTop: "10em" }}>
+    <Container maxWidth="lg" sx={{ margin: ".3em", marginTop: "10em" }}>
       <a href="/decks" style={{ textDecoration: 'none' }}><h4 style={{ color: "white", fontSize: '20px', textDecoration: 'none' }}>⬅ back</h4></a>
       <h2 style={{ color: "#fff", textAlign: "center" }}>{deckData.title}</h2>
       {deckData?.cards?.length > 0 ? (
