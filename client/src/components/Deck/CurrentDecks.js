@@ -72,17 +72,11 @@ function CurrentDecks() {
 
   const userData = data?.me || [];
 
-  if (error)
-    return (
-      <h1
-        style={{
-          color: "white",
-          textAlign: "center",
-        }}
-      >
-        You need to be logged in
-      </h1>
-    );
+  if (error) {
+    window.location.assign('/login');
+  }
+
+
 
   const handleDelete = async (_id) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;

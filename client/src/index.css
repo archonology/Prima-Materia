@@ -18,8 +18,8 @@ code {
 
 .toTop {
   position: fixed;
-  right: 50px;
-  bottom: 100px;
+  right: 30px;
+  bottom: 110px;
   z-index: 1;
 }
 

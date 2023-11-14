@@ -256,6 +256,7 @@ export const Search = () => {
           </Box>
           <Button
             type="submit"
+            color="info"
             variant="contained"
             style={{ maxWidth: "100px" }}
           >

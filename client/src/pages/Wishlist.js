@@ -12,17 +12,9 @@ const Wishlist = () => {
 
   //Error handling if user is not logged in
   if (error) {
-    console.log(error);
-    return (
-      <h3
-        style={{
-          color: "#fff",
-          textAlign: "center",
-        }}
-      >
-        {error.toString().replace("ApolloError: ", "")}
-      </h3>
-    );
+    if (error) {
+      window.location.assign('/login');
+    }
   }
 
   if (loading) {
