@@ -291,6 +291,15 @@ export const Search = () => {
           })}
         </Grid>
       </Container>
+      <div className="toTop">
+        <button
+          className="toTop-button"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo(0, 0);
+          }}
+        >TO TOP</button>
+      </div>
     </>
   );
 };
