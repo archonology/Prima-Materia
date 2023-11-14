@@ -59,14 +59,10 @@ export const MysteryCard = () => {
             textAlign: "center",
           }}
         >
-          <Button
+          <button
+            className="mystery-button"
             onClick={handleSubmit}
-            variant="contained"
-            color="secondary"
-            sx={{ marginTop: "1em", maxWidth: "400px", padding: "1em" }}
-          >
-            Get a Mystery Card
-          </Button>
+          >Summon</button>
         </Box>
 
         <Box sx={{ paddingTop: "3rem" }}>
