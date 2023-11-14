@@ -20,8 +20,8 @@ function Footer() {
             flexGrow: 1,
             justifyContent: "center",
             display: "flex",
-            mb: 3,
-            mt: 3
+            mb: 2,
+            mt: 2
           }}
         >
           <Typography
