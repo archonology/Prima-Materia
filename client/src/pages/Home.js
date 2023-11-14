@@ -91,7 +91,7 @@ const Home = () => {
         alignItems="center"
         justifyContent="center"
         justify="center"
-        style={{ minHeight: '20vh' }}
+        style={{ minHeight: '7vh'}}
       >
         <Grid item xs={8}>
           <Box
@@ -101,13 +101,13 @@ const Home = () => {
               alignItems: "center",
             }}
           >
-            <Typography sx={{ fontSize: '18px', paddingTop: '3em' }}>
+            <Typography sx={{ fontSize: '18px', paddingTop: '2em' }}>
               Prima Materia is a site dedicated to fans of Magic The Gathering.  You can search for cards, add cards to a wishlist, and create virtual decks. Login or sign up to get started!
             </Typography>
           </Box>
         </Grid>
       </Grid>
-      <div className={styles.container} >
+      <div className={styles.container} style={{ marginBottom: '20em' }} >
         <Deck />
       </div>
 

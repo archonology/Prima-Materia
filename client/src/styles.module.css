@@ -10,8 +10,8 @@
 
 .deck {
   position: absolute;
-  margin-top: 35em;
-  margin-bottom: 5em;
+  margin-top: 43em;
+  padding-bottom: 7em;
   width: 500px;
   height: 300px;
   will-change: transform;

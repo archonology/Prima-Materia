@@ -71,7 +71,7 @@ function App() {
             <Header />
           </div>
           <div>
-            <Container sx={{ mt: "6rem", mb: "6rem" }}>
+            <Container sx={{ mt: "6rem", mb: "10rem" }}>
               <Routes>
                 <Route path="/home" element={<Home />} />
                 <Route path="/search" element={<Search />} />
