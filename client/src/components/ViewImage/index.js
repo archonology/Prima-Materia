@@ -41,9 +41,12 @@ export default function ViewImage({ card }) {
   return (
     <>
       <ThemeProvider theme={cardTheme}>
-        <Card sx={{ width: "458px", height: "630px" }}>
+        <Card sx={{ width: "458px", height: "530px" }}>
           <CardContent>
-            <CardMedia component="img" image={card.image} alt={card.name} />
+            <CardMedia
+              component="img"
+              image={card.image}
+              alt={card.name} />
           </CardContent>
         </Card>
       </ThemeProvider>
