@@ -156,7 +156,7 @@ const SingleDeckCard = ({ card, deckId, wishList }) => {
         direction="column"
         alignItems="center"
         justify="center"
-        style={{ minHeight: "100vh" }}
+        style={{ minHeight: "220vh" }}
       >
         <Grid item key={card.cardId}>
           <ThemeProvider theme={cardTheme}>

@@ -51,7 +51,7 @@ const SingleDeck = () => {
         <Grid container>
           {deckData?.cards?.map((card) => {
             return (
-              <Grid item xs={12} sm={6} md={4} sx={{ maxHeight: "580px" }}>
+              <Grid item xs={12} sm={12} md={4} sx={{ maxHeight: "580px" }}>
                 <SingleDeckCard
                   card={card}
                   deckId={deckData._id}
