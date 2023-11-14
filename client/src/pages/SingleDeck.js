@@ -46,6 +46,7 @@ const SingleDeck = () => {
 
   return (
     <Container maxWidth="lg" sx={{ margin: "3em", marginTop: "10em" }}>
+      <a href="/decks" style={{ textDecoration: 'none' }}><h4 style={{ color: "white", fontSize: '20px', textDecoration: 'none' }}>⬅ back</h4></a>
       <h2 style={{ color: "#fff", textAlign: "center" }}>{deckData.title}</h2>
       {deckData?.cards?.length > 0 ? (
         <Grid container>
@@ -66,6 +67,15 @@ const SingleDeck = () => {
         </>
         // <h2 style={{ color: "#fff" }}>This deck has no cards.</h2>
       )}
+      <div className="toTop">
+        <button
+          className="toTop-button"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo(0, 0);
+          }}
+        >TO TOP</button>
+      </div>
     </Container>
   );
 };

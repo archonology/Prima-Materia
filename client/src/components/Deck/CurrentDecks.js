@@ -91,14 +91,16 @@ function CurrentDecks() {
 
   return (
     <>
-      <h1
+      <h2
         style={{
           color: "white",
           textAlign: "center",
+          marginTop: '6em',
+          fontSize: '30px'
         }}
       >
         Your Decks
-      </h1>
+      </h2>
 
       <Box
         sx={{
@@ -114,14 +116,7 @@ function CurrentDecks() {
         <Button
           variant="contained"
           color="success"
-          sx={
-            {
-              // minWidth: "200px",
-              // maxWidth: "200px",
-              // minHeight: "50px",
-              // maxHeight: "50px",
-            }
-          }
+          sx={{}}
         >
           <Link to={"/decks/create"} style={linkStyle}>
             Create Deck
@@ -202,6 +197,15 @@ function CurrentDecks() {
                 </>
               );
             })}
+            <div className="toTop">
+              <button
+                className="toTop-button"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo(0, 0);
+                }}
+              >TO TOP</button>
+            </div>
           </section>
         ) : (
           <>

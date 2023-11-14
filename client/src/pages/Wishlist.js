@@ -22,11 +22,13 @@ const Wishlist = () => {
   }
 
   return (
-    <Container maxWidth="md" sx={{ margin: "10em" }}>
+    <Container sx={{ justifyContent: "center", marginTop: '9em' }}>
       <h3
         style={{
           color: "#fff",
           textAlign: "center",
+          paddingBottom: '1.2em',
+          fontSize: '30px'
         }}
       >
         Wishlist
@@ -41,12 +43,21 @@ const Wishlist = () => {
             image: card.image,
           };
           return (
-            <Grid item xs={12} sm={6} md={4} sx={{ maxHeight: "580px" }}>
+            <Grid item xs={12} sm={6} md={4} sx={{ maxHeight: "640px" }}>
               <SingleCard card={cardData} wishList={userData.wishList} />;
             </Grid>
           );
         })}
       </Grid>
+      <div className="toTop">
+        <button
+          className="toTop-button"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo(0, 0);
+          }}
+        >TO TOP</button>
+      </div>
     </Container>
   );
 };
