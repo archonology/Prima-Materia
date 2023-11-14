@@ -5,6 +5,8 @@ body {
     sans-serif;
 
   background-color: black;
+  background-image: url('./assests/primaBackgrnd.png');
+  background-size: cover;
   color: "#fff";
 }
 

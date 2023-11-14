@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Box, Typography, Grid } from "@mui/material";
 import { useSprings, animated, to as interpolate } from '@react-spring/web';
-import { useDrag } from 'react-use-gesture';
+import { useDrag } from '@use-gesture/react';
 
 import styles from '../styles.module.css';
 
