@@ -6,7 +6,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  background-color: rgb(20, 33, 31);
+  background-color: #1d1c1d;
   color: "#fff";
 }
 
@@ -30,9 +30,8 @@ code {
   color: white;
   border: none;
   box-shadow: 0 17px 20px rgba(0, 0, 0, 0.65);
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
   z-index: 1;
-
 }
 
 .toTop-button:hover {
@@ -40,7 +39,7 @@ code {
 }
 
 .mystery-button {
-  padding: .7em 3.5em .7em 3.5em;
+  padding: 0.7em 3.5em 0.7em 3.5em;
   margin-top: 2em;
   background-color: black;
   border-radius: 10px;
