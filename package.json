@@ -2,6 +2,10 @@
   "name": "prima-materia",
   "version": "1.0",
   "description": "deckbuilding-app",
+  "engines": {
+    "node": "20.11.4",
+    "npm": "10.2.4"
+  },
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
