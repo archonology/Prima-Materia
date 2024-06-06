@@ -13,7 +13,6 @@ import {
   Typography,
 } from "@mui/material";
 import SingleCard from "../components/SingleCard";
-import Auth from "../utils/auth";
 import { useQuery } from "@apollo/client";
 import { QUERY_ME } from "../utils/queries";
 
@@ -75,8 +74,8 @@ export const Search = () => {
   const [superTypeInput, setSuperTypeInput] = useState([]);
   const [setInput, setSetInput] = useState([]);
   const [colorInput, setColorInput] = useState([]);
-  const { loading, data, error } = useQuery(QUERY_ME);
-  const [message, setMessage] = useState('');
+  const { data, error } = useQuery(QUERY_ME);
+  const [message, setMessage] = useState("");
 
   let userData = data?.me || {};
   //If the user is not logged in, create a user object with an empty wishList
@@ -90,7 +89,7 @@ export const Search = () => {
     event.preventDefault();
 
     try {
-      setMessage('loading results...');
+      setMessage("loading results...");
       const response = await searchMagicCards(
         nameInput,
         typeInput.title,
@@ -115,7 +114,7 @@ export const Search = () => {
       }));
 
       setSearchedCards(cardData);
-      setMessage('');
+      setMessage("");
     } catch (err) {
       console.error(err);
     }
@@ -299,7 +298,9 @@ export const Search = () => {
             e.preventDefault();
             window.scrollTo(0, 0);
           }}
-        >TO TOP</button>
+        >
+          TO TOP
+        </button>
       </div>
     </>
   );

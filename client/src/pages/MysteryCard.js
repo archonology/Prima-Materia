@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
-import Auth from "../utils/auth";
 import { ADD_CARD_LIST } from "../utils/mutations";
-import { Box, Button, Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import { mysteryCardSearch } from "../utils/API";
 import SingleCard from "../components/SingleCard";
 import { useQuery } from "@apollo/client";
@@ -10,8 +9,8 @@ import { QUERY_ME } from "../utils/queries";
 
 export const MysteryCard = () => {
   const [mysteryCard, setMysteryCard] = useState([]);
-  const [addCardToWishList, { error }] = useMutation(ADD_CARD_LIST);
-  const { loading, data } = useQuery(QUERY_ME);
+  const [{ error }] = useMutation(ADD_CARD_LIST);
+  const { data } = useQuery(QUERY_ME);
 
   let userData = data?.me || {};
   //If the user is not logged in, create a user object with an empty wishList to pass into SingleCard component
@@ -59,10 +58,9 @@ export const MysteryCard = () => {
             textAlign: "center",
           }}
         >
-          <button
-            className="mystery-button"
-            onClick={handleSubmit}
-          >Summon</button>
+          <button className="mystery-button" onClick={handleSubmit}>
+            Summon
+          </button>
         </Box>
 
         <Box sx={{ paddingTop: "3rem" }}>

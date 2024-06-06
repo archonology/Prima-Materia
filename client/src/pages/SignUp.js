@@ -46,7 +46,7 @@ const SignUp = () => {
     email: "",
     password: "",
   });
-  const [createUser, { error, data }] = useMutation(CREATE_USER);
+  const [createUser] = useMutation(CREATE_USER);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
