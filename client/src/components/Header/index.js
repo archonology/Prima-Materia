@@ -80,8 +80,14 @@ function Header(props) {
   return (
     <>
       <Box sx={{ display: "flex" }}>
-        <AppBar component="nav" style={{ background: "black", paddingBottom: '1em', paddingTop: '1em' }}>
-
+        <AppBar
+          component="nav"
+          style={{
+            background: "black",
+            paddingBottom: "1em",
+            paddingTop: "1em",
+          }}
+        >
           <Toolbar>
             <IconButton
               color="inherit"
@@ -90,9 +96,8 @@ function Header(props) {
               onClick={handleDrawerToggle}
               sx={{ ml: 2, display: { sm: "none" } }}
             >
-
               <MenuIcon />
-              <h4 style={{ margin: '.5em' }}>Prima Materia</h4>
+              <h4 style={{ margin: ".5em" }}>Prima Materia</h4>
             </IconButton>
             <Typography
               variant="h4"

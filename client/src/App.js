@@ -73,7 +73,7 @@ function App() {
           <div>
             <Container sx={{ mt: "6rem", mb: "10rem" }}>
               <Routes>
-                <Route path="/home" element={<Home />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/search" element={<Search />} />
                 <Route path="/decks" element={<Decks />} />
                 <Route path="/wishlist" element={<Wishlist />} />
