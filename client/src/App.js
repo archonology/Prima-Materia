@@ -82,7 +82,7 @@ function App() {
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/decks/create" element={<CreateDeck />} />
                 <Route path="/decks/:deckId" element={<SingleDeck />} />
-                <Route path="*" element={<Home />} />
+                <Route path="/*" element={<Home />} />
               </Routes>
             </Container>
           </div>
