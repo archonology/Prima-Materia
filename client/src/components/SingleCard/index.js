@@ -77,7 +77,7 @@ const SingleCard = ({ card, wishList }) => {
   const [clicked, setClicked] = useState(wishState);
   const [openDeck, setOpenDeck] = React.useState(false);
   const [openImage, setOpenImage] = React.useState(false);
-  const [addCardToWishList, { error }] = useMutation(ADD_CARD_LIST);
+  const [addCardToWishList] = useMutation(ADD_CARD_LIST);
   const [removeCardFromList] = useMutation(REMOVE_CARD_LIST);
 
   const handleClickOpenDecks = () => {
@@ -101,7 +101,7 @@ const SingleCard = ({ card, wishList }) => {
     if (!clicked) {
       //!clicked = false
       try {
-        const { data } = await addCardToWishList({
+        await addCardToWishList({
           variables: { ...card },
         });
         setClicked(true);
@@ -114,7 +114,7 @@ const SingleCard = ({ card, wishList }) => {
     if (clicked) {
       //clicked = true
       try {
-        const { data } = await removeCardFromList({
+        await removeCardFromList({
           variables: { idCard: card.cardId }, //Remove the card based on the cardId value
         });
         setClicked(false);
