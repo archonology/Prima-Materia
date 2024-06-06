@@ -16,7 +16,6 @@ import { QUERY_ME } from "../../utils/queries";
 import { useMutation, useQuery } from "@apollo/client";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { REMOVE_DECK } from "../../utils/mutations";
-import Auth from "../../utils/auth";
 
 // styling button
 const linkStyle = {
@@ -101,7 +100,6 @@ function CurrentDecks() {
 
       <Box
         sx={{
-          display: "grid",
           gridTemplateColumns: { sm: "1fr" },
           gap: 1,
           display: "flex",
@@ -121,7 +119,6 @@ function CurrentDecks() {
         component="form"
         noValidate
         sx={{
-          display: "grid",
           gridTemplateColumns: { sm: "1fr", md: "1fr 1fr 1fr" },
           gap: 1,
           display: "flex",
@@ -144,9 +141,9 @@ function CurrentDecks() {
             {userData?.decks?.map((deck) => {
               return (
                 <>
-                  <ThemeProvider key={deck._id} theme={cardTheme}>
+                  <ThemeProvider theme={cardTheme}>
                     <Card key={deck._id} sx={{ color: "#fff", width: "250px" }}>
-                      <CardContent key={deck._id}>
+                      <CardContent>
                         <Link
                           className="custom-link"
                           to={`/decks/${deck._id}`}

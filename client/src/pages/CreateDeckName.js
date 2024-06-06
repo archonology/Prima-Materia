@@ -20,35 +20,27 @@ const DeckTextField = styled(TextField)({
   },
 });
 
-// styling button
-const linkStyle = {
-  textDecoration: "none",
-  color: "white",
-};
-
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
 export const CreateDeck = () => {
-
   // Create state for sncakbar
-  const [state, setState] = React.useState({
+  const [state] = React.useState({
     openagain: false,
-    vertical: 'top',
-    horizontal: 'center',
+    vertical: "top",
+    horizontal: "center",
   });
-  const { vertical, horizontal, openagain } = state;
+  const { vertical, horizontal } = state;
 
   const [open, setOpen] = React.useState(false);
-  const [deckName, setDeckName] = useState("")
+  const [deckName, setDeckName] = useState("");
   const handleClick = () => {
     setOpen(true);
-
   };
 
   const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
+    if (reason === "clickaway") {
       return;
     }
 
@@ -59,10 +51,10 @@ export const CreateDeck = () => {
     e.preventDefault();
     handleCreate();
     handleClick({
-      vertical: 'top',
-      horizontal: 'center',
+      vertical: "top",
+      horizontal: "center",
     });
-    setDeckName(title)
+    setDeckName(title);
   };
 
   // Button for snackbar
@@ -78,75 +70,86 @@ export const CreateDeck = () => {
         onClick={() => {
           handleCreate();
           handleClick({
-            vertical: 'top',
-            horizontal: 'center',
+            vertical: "top",
+            horizontal: "center",
           });
-          setDeckName(title)
+          setDeckName(title);
         }}
-      > Create Deck       
+      >
+        {" "}
+        Create Deck
       </Button>
     </React.Fragment>
-  )
+  );
 
   const [title, setTitle] = useState("");
 
-  const [createDeck, { error }] = useMutation(CREATE_DECK);
+  const [createDeck] = useMutation(CREATE_DECK);
   const handleCreate = async (event) => {
     try {
-      const { data } = await createDeck({
+      await createDeck({
         variables: { title: title },
       });
       setTitle("");
-      window.location.assign('/decks');
+      window.location.assign("/decks");
     } catch (err) {
       console.log(err);
     }
   };
 
-
   return (
     <>
-              <Box
+      <Box
         component="form"
         onSubmit={handleSubmit}
-          noValidate
-          sx={{
-            textAlign: "center",
-            gridTemplateColumns: { sm: "1fr", md: "1fr 1fr" },
-            gap: 2,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            margin: "5em",
-            marginTop: "8em"
+        noValidate
+        sx={{
+          textAlign: "center",
+          gridTemplateColumns: { sm: "1fr", md: "1fr 1fr" },
+          gap: 2,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          margin: "5em",
+          marginTop: "8em",
+        }}
+      >
+        <h2
+          style={{
+            color: "white",
           }}
         >
-          <h2
-            style={{
-              color: "white",
-            }}
+          Create a Deck
+        </h2>
+        <DeckTextField
+          sx={{
+            input: { color: "#fff" },
+            label: { color: "#fff" },
+            maxWidth: "400px",
+          }}
+          id="outlined"
+          label="Name your Deck"
+          variant="outlined"
+          value={title}
+          onChange={(event) => setTitle(event.target.value)}
+        />
+        {button}
+        <Snackbar
+          open={open}
+          autoHideDuration={3000}
+          onClose={handleClose}
+          anchorOrigin={{ vertical, horizontal }}
+          key={vertical + horizontal}
+        >
+          <Alert
+            onClose={handleClose}
+            severity="success"
+            sx={{ width: "100%" }}
           >
-            Create a Deck
-          </h2>
-          <DeckTextField
-            sx={{
-              input: { color: "#fff" },
-              label: { color: "#fff" },
-              maxWidth: "400px"
-            }}
-            id="outlined"
-            label="Name your Deck"
-            variant="outlined"
-            value={title}
-            onChange={(event) => setTitle(event.target.value)}
-          />
-          {button}
-          <Snackbar open={open} autoHideDuration={3000} onClose={handleClose} anchorOrigin={{ vertical, horizontal }} key={vertical + horizontal}>
-            <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-              {deckName} was successfully created!
-            </Alert>
-          </Snackbar>
-        </Box>     
+            {deckName} was successfully created!
+          </Alert>
+        </Snackbar>
+      </Box>
     </>
   );
 };
