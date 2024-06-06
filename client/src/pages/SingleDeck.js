@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import Auth from "../utils/auth";
-import { useQuery, useMutation } from "@apollo/client";
+import React from "react";
+import { useQuery } from "@apollo/client";
 import { QUERY_SINGLE_DECK, QUERY_ME } from "../utils/queries";
 import { Container, Grid } from "@mui/material";
 import { useParams } from "react-router-dom";
@@ -46,7 +45,13 @@ const SingleDeck = () => {
 
   return (
     <Container maxWidth="lg" sx={{ margin: ".3em", marginTop: "10em" }}>
-      <a href="/decks" style={{ textDecoration: 'none' }}><h4 style={{ color: "white", fontSize: '20px', textDecoration: 'none' }}>⬅ back</h4></a>
+      <a href="/decks" style={{ textDecoration: "none" }}>
+        <h4
+          style={{ color: "white", fontSize: "20px", textDecoration: "none" }}
+        >
+          ⬅ back
+        </h4>
+      </a>
       <h2 style={{ color: "#fff", textAlign: "center" }}>{deckData.title}</h2>
       {deckData?.cards?.length > 0 ? (
         <Grid container>
@@ -63,8 +68,7 @@ const SingleDeck = () => {
           })}
         </Grid>
       ) : (
-        <>
-        </>
+        <></>
         // <h2 style={{ color: "#fff" }}>This deck has no cards.</h2>
       )}
       <div className="toTop">
@@ -74,7 +78,9 @@ const SingleDeck = () => {
             e.preventDefault();
             window.scrollTo(0, 0);
           }}
-        >TO TOP</button>
+        >
+          TO TOP
+        </button>
       </div>
     </Container>
   );

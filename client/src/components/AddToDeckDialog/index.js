@@ -25,7 +25,7 @@ export default function AddToDeckDialog({ card }) {
 
 function DeckList({ card }) {
   const [addCardToDeck, { deckError }] = useMutation(ADD_CARD_DECK);
-  const { loading, userError, data } = useQuery(QUERY_ME);
+  const { data } = useQuery(QUERY_ME);
   const userData = data?.me || [];
 
   const { enqueueSnackbar } = useSnackbar();
@@ -33,13 +33,14 @@ function DeckList({ card }) {
   // takes in a card and deck object
   const handleAddtoDeck = async (card, deck) => {
     try {
-      const { data } = await addCardToDeck({
+      await addCardToDeck({
         variables: { cardData: card, deckId: deck._id },
       });
       // Display the success message when card added to deck
       enqueueSnackbar(`Added to ${deck.title}`, { variant: "success" });
     } catch (err) {
       console.error(err);
+      console.error(deckError);
     }
   };
 
