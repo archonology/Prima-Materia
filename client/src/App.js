@@ -74,15 +74,16 @@ function App() {
             <Container sx={{ mt: "6rem", mb: "10rem" }}>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/search" element={<Search />} />
-                <Route path="/decks" element={<Decks />} />
-                <Route path="/wishlist" element={<Wishlist />} />
-                <Route path="/mysterycard" element={<MysteryCard />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<SignUp />} />
-                <Route path="/decks/create" element={<CreateDeck />} />
-                <Route path="/decks/:deckId" element={<SingleDeck />} />
-                <Route path="/*" element={<Home />} />
+                <Route path="home" element={<Home />} />
+                <Route path="search" element={<Search />} />
+                <Route path="decks" element={<Decks />} />
+                <Route path="wishlist" element={<Wishlist />} />
+                <Route path="mysterycard" element={<MysteryCard />} />
+                <Route path="login" element={<Login />} />
+                <Route path="signup" element={<SignUp />} />
+                <Route path="decks/create" element={<CreateDeck />} />
+                <Route path="decks/:deckId" element={<SingleDeck />} />
+                <Route path="*" element={<Home />} />
               </Routes>
             </Container>
           </div>
