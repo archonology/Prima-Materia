@@ -5,8 +5,8 @@
             "destination": "/"
         },
         {
-            "source": "/(.*)",
-            "destination": "/api"
+            "source": "/api",
+            "destination": "/graphql"
         }
     ]
 }
