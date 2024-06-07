@@ -2,7 +2,7 @@
 import decode from "jwt-decode";
 
 // create a new class to instantiate for a user
-const AuthService = class {
+class AuthService {
   // get user data
   getProfile() {
     return decode(this.getToken());
@@ -46,6 +46,6 @@ const AuthService = class {
     window.location.assign("/home");
     alert("logout successful!");
   }
-};
+}
 
 export default new AuthService();
