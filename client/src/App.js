@@ -32,7 +32,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
-  uri: "api/graphql",
+  uri: "/graphql",
 });
 
 //dark theme by default
